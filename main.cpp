@@ -29,11 +29,11 @@ int main()
     in>>e;
     in>>f;
 
-    cout<<a<<endl;
-    cout<<b<<endl;
-    cout<<c<<endl;
-    cout<<d<<endl;
-    cout<<e<<endl;
-    cout<<f<<endl;
+    cout<<"int: "<<a<<endl;
+    cout<<"double: "<<b<<endl;
+    cout<<"float: "<<c<<endl;
+    cout<<"bool: "<<d<<endl;
+    cout<<"char: "<<e<<endl;
+    cout<<"string: "<<f<<endl;
     return 0;
 }

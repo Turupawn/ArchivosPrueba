@@ -6,34 +6,36 @@ using namespace std;
 int main()
 {
     ofstream out("test.txt");
-    out<<1234<<' ';
-    out<<3.5<<' ';
-    out<<5.2f<<' ';
-    out<<true<<' ';
-    out<<'f'<<' ';
-    out<<"fdsa"<<' ';
+    for(int i=0;i<2;i++)
+    {
+        string nombre;
+        int score;
+        cout<<"Ingrese nombre: ";
+        cin>>nombre;
+        cout<<"Ingrese score: ";
+        cin>>score;
+
+        out<<nombre<<' ';
+        out<<score<<' ';
+    }
     out.close();
 
     ifstream in("test.txt");
-    int a;
-    double b;
-    float c;
-    bool d;
-    char e;
-    string f;
+    int num;
+    string str;
 
-    in>>a;
-    in>>b;
-    in>>c;
-    in>>d;
-    in>>e;
-    in>>f;
+    int num_max=-1;
+    string str_max="";
+    while(in>>str && in>>num)
+    {
+        cout<<str<<" "<<num<<endl;
+        if(num>num_max)
+        {
+            num_max=num;
+            str_max=str;
+        }
+    }
+    cout<<"Max score: "<<str_max<<" "<<num_max;
 
-    cout<<"int: "<<a<<endl;
-    cout<<"double: "<<b<<endl;
-    cout<<"float: "<<c<<endl;
-    cout<<"bool: "<<d<<endl;
-    cout<<"char: "<<e<<endl;
-    cout<<"string: "<<f<<endl;
     return 0;
 }
